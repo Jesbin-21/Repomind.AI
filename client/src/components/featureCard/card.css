@@ -1,0 +1,80 @@
+.featureCard {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  position: relative;
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  flex: 1 1 300px;
+  max-width: 380px;
+  min-height: 250px;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: #EEF2FF;
+  border: 1px solid #C7D2FE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-indigo);
+  font-size: 20px;
+  transition: var(--transition-fast);
+}
+
+.featureCard:hover .card-icon-wrapper {
+  background: var(--accent-indigo);
+  color: #FFFFFF;
+  border-color: var(--accent-indigo);
+}
+
+.featureCard h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+}
+
+.featureCard p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.card-footer {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-indigo);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: var(--transition-fast);
+}
+
+.featureCard:hover .card-footer {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .featureCard {
+    max-width: 100%;
+    min-height: auto;
+    padding: 24px 20px;
+  }
+}
