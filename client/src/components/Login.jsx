@@ -19,7 +19,7 @@ function Login({ switchToSignup }) {
     try {
       console.log(user);
       const res = await axios.post(
-        "http://localhost:5000/login", user
+        `${import.meta.env.VITE_API_URL}/login`, user
       );
 
       localStorage.setItem("token", res.data.token);

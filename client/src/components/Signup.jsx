@@ -43,7 +43,7 @@ function Signup({ switchToSignup }) {
     try {
       console.log(user);
       const res = await axios.post(
-        "http://localhost:5000/signup", user
+        `${import.meta.env.VITE_API_URL}/signup`, user
       );
       console.log(res.data);
       alert(res.data.message);
