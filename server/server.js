@@ -5,11 +5,13 @@ import authRoutes from "./routes/authRoutes.js";
 import cors from "cors";
 import uploadRoutes from "./routes/uploadRoutes.js";
 
+
+
 connectDB();
 const app = express();
 
 app.use(cors({
-  origin: "*",
+  origin: "https://repomind-ai-f75x.onrender.com",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
