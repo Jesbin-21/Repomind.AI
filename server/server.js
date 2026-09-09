@@ -11,7 +11,10 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: "https://repomind-ai-f75x.onrender.com",
+  origin: [
+    "http://localhost:5173",
+    "https://repomind-ai-f75x.onrender.com"
+  ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
