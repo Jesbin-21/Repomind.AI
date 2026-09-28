@@ -1,72 +1,226 @@
-# 🧠 RepoMind.AI
+# 🧠 RepoMind.AI — AI Code Repository Analyzer
 
-> **AI-powered code repository analyzer** — Upload any project and get instant, intelligent insights powered by Google Gemini.
+RepoMind.AI is a full-stack web application that uses **Google Gemini AI** to analyze software projects and provide intelligent insights about their codebase.
 
----
-
-## 📌 Overview
-
-RepoMind.AI lets developers upload an entire codebase and receive a comprehensive AI-generated analysis. It reads your source files, filters out binaries and irrelevant assets, and sends the meaningful code to Google Gemini for deep analysis — surfacing architecture overviews, potential issues, tech stack summaries, and more.
+Developers can upload an entire project and receive an AI-generated analysis covering the **project structure, architecture, technologies, potential issues, and other code insights**.
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- 📂 **Drag & Drop Repository Upload** — Upload all your project files at once
-- 🤖 **Gemini AI Analysis** — Powered by `@google/generative-ai` for rich code understanding
-- 🔐 **User Authentication** — JWT-based signup & login system
-- 📜 **Analysis History** — Save and revisit past analyses
-- 🎨 **Smooth UI** — Built with React 19, Lenis smooth scroll, and Motion animations
-- 🌐 **Full-Stack** — React (Vite) frontend + Express.js backend + MongoDB
-
----
-
-## 🗂️ Project Structure
-
-```
-RepoMind.AI/
-├── client/               # React frontend (Vite)
-│   ├── src/
-│   │   ├── pages/        # Home, Signup, Features, Explainer, Explore, Dashboard, History
-│   │   ├── components/   # Shared UI components (Header, etc.)
-│   │   └── App.jsx       # Root app with routing
-│   └── package.json
-│
-└── server/               # Express.js backend
-    ├── config/           # Database connection
-    ├── controllers/      # Route logic
-    ├── middleware/       # Auth & other middleware
-    ├── models/           # Mongoose models (User, AnalysisHistory)
-    ├── routes/           # API routes (auth, upload, history)
-    ├── utils/            # Gemini analyzer, file tree builder
-    └── server.js         # Entry point
-```
+* 📂 Upload complete code repositories
+* 🖱️ Drag-and-drop project upload
+* 🤖 AI-powered code analysis using Google Gemini
+* 🌳 Automatic project file-tree generation
+* 🔍 Analyze source code and project structure
+* 🛠️ Identify potential code issues
+* 📚 Generate project and architecture insights
+* 💻 Technology stack detection
+* 🔐 JWT-based user authentication
+* 👤 User registration and login
+* 📜 Analysis history
+* 🔄 Revisit previous analyses
+* 🎨 Modern responsive user interface
+* ✨ Smooth scrolling with Lenis
+* 🎬 Motion-based UI animations
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer     | Technology                          |
-|-----------|-------------------------------------|
-| Frontend  | React 19, Vite, React Router v7     |
-| Animation | Motion, Lenis smooth scroll         |
-| Backend   | Express.js v5, Node.js              |
-| Database  | MongoDB (Mongoose)                  |
-| AI        | Google Gemini (`@google/generative-ai`) |
-| Auth      | JWT (`jsonwebtoken`), bcrypt        |
-| Upload    | Multer (memory storage, 50MB limit) |
+### Frontend
+
+* React 19
+* Vite
+* JavaScript
+* React Router
+* CSS
+
+### Backend
+
+* Node.js
+* Express.js
+* REST API
+* Multer
+
+### Database
+
+* MongoDB
+* Mongoose
+
+### AI
+
+* Google Gemini AI
+* `@google/generative-ai`
+
+### Authentication
+
+* JSON Web Token (JWT)
+* bcrypt
+
+### UI & Animation
+
+* Motion
+* Lenis
 
 ---
 
-## ⚙️ Getting Started
+## 📁 Project Structure
 
-### Prerequisites
-
-- Node.js `v18+`
-- MongoDB instance (local or Atlas)
-- Google Gemini API key
+```text
+RepoMind.AI/
+│
+├── client/
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── Home/
+│   │   │   ├── Signup/
+│   │   │   ├── Features/
+│   │   │   ├── Explainer/
+│   │   │   ├── Explore/
+│   │   │   ├── Dashboard/
+│   │   │   └── History/
+│   │   │
+│   │   ├── components/
+│   │   │   └── Header/
+│   │   │
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   │
+│   ├── index.html
+│   ├── vite.config.js
+│   └── package.json
+│
+├── server/
+│   ├── config/
+│   │   └── db.js
+│   │
+│   ├── controllers/
+│   │
+│   ├── middleware/
+│   │
+│   ├── models/
+│   │   ├── User.js
+│   │   └── AnalysisHistory.js
+│   │
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── uploadRoutes.js
+│   │   └── historyRoutes.js
+│   │
+│   ├── utils/
+│   │   ├── geminiAnalyzer.js
+│   │   └── fileTreeBuilder.js
+│   │
+│   ├── server.js
+│   └── package.json
+│
+└── README.md
+```
 
 ---
+
+## 🔄 How It Works
+
+```text
+Developer
+    │
+    ▼
+Upload Project
+    │
+    ▼
+React Frontend
+    │
+    ▼
+Express Backend
+    │
+    ├── Filter files
+    ├── Ignore irrelevant files
+    └── Build project structure
+    │
+    ▼
+Google Gemini AI
+    │
+    ▼
+Code Analysis
+    │
+    ├── Project Overview
+    ├── Architecture
+    ├── Tech Stack
+    ├── Code Insights
+    └── Potential Issues
+    │
+    ▼
+MongoDB
+    │
+    ▼
+Analysis History
+```
+
+---
+
+## 🤖 AI Code Analysis
+
+RepoMind.AI processes the uploaded project and sends relevant source-code information to **Google Gemini AI**.
+
+The analyzer can provide insights such as:
+
+* Project overview
+* Architecture explanation
+* Technology identification
+* Code structure analysis
+* Potential issues
+* Improvement suggestions
+* Important files and their purpose
+
+The application filters out unnecessary files and assets before sending project information for analysis.
+
+---
+
+## 🔐 Authentication
+
+RepoMind.AI uses **JWT authentication** for user accounts.
+
+Users can:
+
+* Create an account
+* Log in
+* Access protected features
+* View their analysis history
+
+Authentication requests use JWT tokens to authorize protected API requests.
+
+---
+
+## 📂 Repository Upload
+
+Users can upload project files through the web interface.
+
+The application supports:
+
+* Drag-and-drop uploads
+* Multiple project files
+* Large project uploads
+* File filtering
+* Project structure generation
+
+Unnecessary files such as binaries and irrelevant assets can be excluded from the analysis process.
+
+---
+
+## 📜 Analysis History
+
+Each user's previous analyses can be stored in MongoDB.
+
+Users can:
+
+* View previous analyses
+* Revisit generated insights
+* Keep track of analyzed projects
+
+---
+
+## 🚀 Getting Started
 
 ### 1. Clone the Repository
 
@@ -75,85 +229,115 @@ git clone https://github.com/Jesbin-21/RepoMind.AI.git
 cd RepoMind.AI
 ```
 
----
-
-### 2. Setup the Server
+### 2. Install Server Dependencies
 
 ```bash
 cd server
 npm install
 ```
 
-Create a `.env` file in the `server/` directory:
-
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-GEMINI_API_KEY=your_google_gemini_api_key
-```
-
-Start the dev server:
+### 3. Start the Backend
 
 ```bash
 npm run dev
 ```
 
----
+The backend runs on:
 
-### 3. Setup the Client
+```text
+http://localhost:5000
+```
+
+### 4. Install Client Dependencies
+
+Open another terminal:
 
 ```bash
 cd client
 npm install
 ```
 
-Create a `.env` file in the `client/` directory:
-
-```env
-VITE_API_URL=http://localhost:5000
-```
-
-Start the dev server:
+### 5. Start the Frontend
 
 ```bash
 npm run dev
 ```
 
-The app will be available at **`http://localhost:5173`**.
+The frontend runs on:
+
+```text
+http://localhost:5173
+```
 
 ---
 
-## 🔌 API Endpoints
+## 📡 API Endpoints
 
-### Auth
+### 🔐 Authentication
 
-| Method | Endpoint   | Description              |
-|--------|------------|--------------------------|
-| POST   | `/signup`  | Register a new user      |
-| POST   | `/login`   | Login and receive a JWT  |
+| Method | Endpoint  | Description           |
+| ------ | --------- | --------------------- |
+| `POST` | `/signup` | Register a new user   |
+| `POST` | `/login`  | Login and receive JWT |
 
-### Upload & Analysis
+### 📂 Repository Analysis
 
-| Method | Endpoint   | Description                                  |
-|--------|------------|----------------------------------------------|
-| POST   | `/upload`  | Upload project files for Gemini AI analysis  |
+| Method | Endpoint  | Description                          |
+| ------ | --------- | ------------------------------------ |
+| `POST` | `/upload` | Upload project files for AI analysis |
+
+### 📜 Analysis History
+
+| Method | Endpoint         | Description                |
+| ------ | ---------------- | -------------------------- |
+| `GET`  | History endpoint | Retrieve previous analyses |
 
 ---
 
-## 🌍 Deployment
+## 🌐 Deployment
 
-- **Frontend**: Deployed on [Vercel](https://vercel.com) or any static host
-- **Backend**: Deployed on [Render](https://render.com) at `https://repomind-ai-f75x.onrender.com`
+The application can be deployed using:
+
+* Vercel for the frontend
+* Render for the backend
+* MongoDB Atlas for the database
+
+### Live Backend
+
+The backend is deployed on Render.
+
+---
+
+## 🔮 Future Improvements
+
+* 📊 Code quality scoring
+* 🔎 Advanced code search
+* 🧩 Dependency analysis
+* 🐛 Automated bug detection
+* 🔐 Security vulnerability detection
+* 📈 Project complexity analysis
+* 💬 AI-powered code questions
+* 📥 Export analysis reports
+* 🔗 GitHub repository integration
+
+---
+
+## 👨‍💻 Author
+
+**Jesbin Jaison**
+
+BCA Graduate | MERN Full-Stack Developer
+
+### Technologies
+
+```text
+React.js • Node.js • Express.js • MongoDB
+JavaScript • Gemini AI • JWT • REST APIs
+Motion • Lenis • Git • GitHub
+```
 
 ---
 
 ## 📄 License
 
 This project is licensed under the **ISC License**.
-
----
-
-## 👨‍💻 Author
-
-Made with ❤️ by **Jesbin**
